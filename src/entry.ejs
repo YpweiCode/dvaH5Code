@@ -1,0 +1,31 @@
+<% htmlWebpackPlugin.options.headScripts = htmlWebpackPlugin.options.headScripts || [] %>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="内部项目 际链所有">
+  <!--<meta content="width=device-width, initial-scale=1" name="viewport" />-->
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+  <title>仓盟</title>
+  <!--[if lte IE 10]>
+      <script
+        src="https://as.alipayobjects.com/g/component/??console-polyfill/0.2.2/index.js,media-match/2.0.2/media.match.min.js"></script>
+  <![endif]-->
+  <script>
+    !function(a,b){var c=a.documentElement,d="orientationchange"in window?"orientationchange":"resize",e=function(){var a=c.clientWidth;a&&(a>=750?c.style.fontSize="100px":c.style.fontSize=100*(a/750)+"px",c.clientWidth)};a.addEventListener&&(e(),b.addEventListener(d,e,!1),a.addEventListener("DOMContentLoaded",e,!1))}(document,window);
+  </script>
+  <script src="//api.map.baidu.com/api?v=2.0&ak=k13kztGtmq0ww8vIyhMibREyTxcUK4qO"></script>
+  <% for (item of htmlWebpackPlugin.options.headScripts) { %>
+    <script src="<%= item %>"></script>
+  <% } %>
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+
+
+</html>
